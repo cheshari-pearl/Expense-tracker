@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
 
         val expensesList = listOf(expense1, expense2, expense3)
         val expensesAdapter = Expenses_Adapter(expensesList)
-//        binding.cvExpenses.layoutManager = LinearLayoutManager(this)
-//        binding.cvExpenses.adapter = expensesAdapter
+      binding.rvExpenses.layoutManager = LinearLayoutManager(this)
+        binding.rvExpenses.adapter = expensesAdapter
     }
 
 }

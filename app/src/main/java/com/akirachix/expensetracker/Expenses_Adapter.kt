@@ -17,8 +17,15 @@ class Expenses_Adapter(val expensesList: List<Expenses>): RecyclerView.Adapter<E
     }
     override fun onBindViewHolder(holder: ExpensesViewHolder, position: Int) {
         val expenses = expensesList[position]
+        holder.tvDate.text=expenses.date
+        holder.tvExpense.text = expenses.expense
+            holder.tvAmount.text = expenses.amount
+
 
     }
 }
 class ExpensesViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    var tvExpense:TextView = itemView.findViewById(R.id.tvExpense)
+    var tvAmount:TextView = itemView.findViewById(R.id.tvAmount)
+    var tvDate:TextView = itemView.findViewById(R.id.tvDate)
 }
